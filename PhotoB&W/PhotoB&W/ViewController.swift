@@ -49,7 +49,6 @@ class ViewController: UIViewController {
     }
     
     func colorSelectionBtnEdit(){
-        
         // White button
         colorSelection.layer.borderWidth = 1
         colorSelection.layer.borderColor = UIColor.black.cgColor
@@ -58,9 +57,7 @@ class ViewController: UIViewController {
         toolBoxView.layer.shadowOffset = CGSize(width: -1, height: 1)
         toolBoxView.layer.shadowRadius = 2
         toolBoxView.layer.shadowOpacity = 1
-        toolBoxView.layer.cornerRadius = 2
-
-        
+        toolBoxView.layer.cornerRadius = 4
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
