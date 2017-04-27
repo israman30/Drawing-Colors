@@ -21,6 +21,10 @@ class ViewController: UIViewController {
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
     
+    var brushSize: CGFloat = 5.0
+    
+    var opacity: CGFloat = 1.0
+    
     var tool:UIImageView!
     var isDrawing = true
     
@@ -34,7 +38,6 @@ class ViewController: UIViewController {
         tool.frame = CGRect(x: self.view.bounds.size.width, y: self.view.bounds.size.height, width: 38, height: 38)
         tool.image = #imageLiteral(resourceName: "artist-paint-brush-mrku1gj")
         self.view.addSubview(tool)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: Drawing a line function
     func drawnLine(from: CGPoint, to: CGPoint){
         UIGraphicsBeginImageContext(self.view.frame.size)
         imagePhoto.image?.draw(in: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
@@ -56,8 +60,8 @@ class ViewController: UIViewController {
         
         context?.setBlendMode(.normal)
         context?.setLineCap(CGLineCap.round)
-        context?.setLineWidth(5)
-        context?.setStrokeColor(UIColor(red: red, green: green, blue: blue, alpha: 1.0).cgColor)
+        context?.setLineWidth(brushSize) // Brush size variable value
+        context?.setStrokeColor(UIColor(red: red, green: green, blue: blue, alpha: opacity).cgColor)
         context?.strokePath()
         
         imagePhoto.image = UIGraphicsGetImageFromCurrentImageContext()
@@ -89,12 +93,16 @@ class ViewController: UIViewController {
         settingsVC.red = red
         settingsVC.blue = blue
         settingsVC.green = green
+        settingsVC.brushSize1 = brushSize
+        settingsVC.opacity = opacity
     }
 
+    // MARK: Reset view
     @IBAction func resetBtn(_ sender: Any) {
         self.imagePhoto.image = nil
     }
     
+    // MARK: Action.- Pick color
     @IBAction func pickColorBtn(_ sender: Any) {
         
         if (sender as AnyObject).tag == 0 {
@@ -116,6 +124,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: Saving a drawing with alert sheet + photo picker
     @IBAction func saveBtn(_ sender: Any) {
         
         let actionSheet = UIAlertController(title: "Pick a Choice", message: "", preferredStyle: .actionSheet)
@@ -128,6 +137,7 @@ class ViewController: UIViewController {
             
             self.present(imagePicker, animated: true, completion: nil)
         }))
+        
         actionSheet.addAction(UIAlertAction(title: "Save your art", style: .default, handler: { (UIAlertAction) in
             
             if let image = self.imagePhoto.image {
@@ -138,10 +148,9 @@ class ViewController: UIViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         
         present(actionSheet, animated: true, completion: nil)
-        
-        
     }
     
+    // MARK: Erase draw line
     @IBAction func eraseBtn(_ sender: Any) {
         
         if isDrawing {
@@ -156,9 +165,10 @@ class ViewController: UIViewController {
         
         isDrawing = !isDrawing
     }
-    
 }
 
+
+// MARK: Extension.- Picker controller
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, SettingsVCDelagate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imagePicker = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -177,6 +187,8 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
         self.red = settingsVC.red
         self.blue = settingsVC.blue
         self.green = settingsVC.green
+        self.brushSize = settingsVC.brushSize1
+        self.opacity = settingsVC.opacity
     }
 }
 

@@ -10,7 +10,6 @@ import UIKit
 
 protocol SettingsVCDelagate: class {
     func settingsVCDidFinish(_ settingsVC: SettingsViewController )
-    
 }
 
 class SettingsViewController: UIViewController {
@@ -37,6 +36,10 @@ class SettingsViewController: UIViewController {
     var blue: CGFloat = 0.0
     var green: CGFloat = 0.0
     
+    var brushSize1: CGFloat = 5.0
+    
+    var opacity: CGFloat = 1.0
+    
     var delegate: SettingsVCDelagate?
      
     override func viewDidLoad() {
@@ -52,14 +55,22 @@ class SettingsViewController: UIViewController {
         
         blueSlider.value = Float(blue)
         blueLabel.text = String(Int(blueSlider.value * 255))
-
-        
     }
     
+    // MARK: Changing brush size
     @IBAction func brushSizeChange(_ sender: Any) {
+        
+        let slider = sender as! UISlider
+        brushSize1 = CGFloat(slider.value)
+        previewDraw(red: red, green: green, blue: blue)
     }
     
+    // MARK: Changing brush opacity
     @IBAction func opacityChange(_ sender: Any) {
+        
+        let slider = sender as! UISlider
+        opacity = CGFloat(slider.value)
+        previewDraw(red: red, green: green, blue: blue)
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,6 +101,7 @@ class SettingsViewController: UIViewController {
         previewDraw(red: red, green: green, blue: blue)
         greenLabel.text = "\(Int(slider.value * 255))"
     }
+    
     @IBAction func blueSliderChange(_ sender: Any) {
         
         let slider = sender as! UISlider
@@ -98,8 +110,21 @@ class SettingsViewController: UIViewController {
         blueLabel.text = "\(Int(slider.value * 255))"
     }
     
+    // MARK: Preview drawing function
     func previewDraw(red: CGFloat, green: CGFloat, blue: CGFloat){
-        imageView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+//        imageView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        UIGraphicsBeginImageContext(imageView.frame.size)
+        
+        let context = UIGraphicsGetCurrentContext()
+        context?.setStrokeColor(UIColor(red: red, green: green, blue: blue, alpha: opacity).cgColor)
+        context?.setLineWidth(brushSize1)
+        context?.setLineCap(CGLineCap.round)
+        context?.move(to: CGPoint(x: 70, y: 70))
+        context?.addLine(to: CGPoint(x: 70, y: 70))
+        context?.strokePath()
+        
+        imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
     }
 
 }
