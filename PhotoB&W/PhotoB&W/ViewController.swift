@@ -108,9 +108,24 @@ class ViewController: UIViewController {
     
     @IBAction func saveBtn(_ sender: Any) {
         
-        if let image = imagePhoto.image {
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        }
+        let actionSheet = UIAlertController(title: "Pick an image", message: "", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Pick an image", style: .default, handler: { (UIAlertAction) in
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = false
+            imagePicker.delegate = self
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Save your art", style: .default, handler: { (UIAlertAction) in
+            
+            if let image = self.imagePhoto.image {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            }
+        }))
+        
+        
     }
     
     @IBAction func eraseBtn(_ sender: Any) {
@@ -132,8 +147,8 @@ class ViewController: UIViewController {
 
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let imagePicker = info[UIImagePickerControllerOriginalImage] {
-            
+        if let imagePicker = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                self.selectedImage = imagePicker
         }
     }
 }
