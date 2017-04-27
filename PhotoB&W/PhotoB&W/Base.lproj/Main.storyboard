@@ -36,11 +36,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf4-IX-P3i">
-                                <rect key="frame" x="320" y="612" width="30" height="35"/>
+                                <rect key="frame" x="320" y="612" width="35" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dWV-Zm-nKM"/>
-                                    <constraint firstAttribute="width" constant="30" id="gbD-KA-sot"/>
+                                    <constraint firstAttribute="width" constant="35" id="gbD-KA-sot"/>
                                 </constraints>
                                 <connections>
                                     <action selector="pickColorBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MY6-1z-vTO"/>
@@ -194,6 +194,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorSelection" destination="bKJ-i3-Mjh" id="MkT-WY-OKZ"/>
                         <outlet property="imagePhoto" destination="KaS-d7-seM" id="BgB-qj-h3U"/>
                         <outlet property="toolEraserIcon" destination="szh-Nf-D9r" id="kJu-IG-gEi"/>
                     </connections>

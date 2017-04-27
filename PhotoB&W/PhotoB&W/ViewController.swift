@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toolEraserIcon: UIButton!
     
+    @IBOutlet weak var colorSelection: UIButton!
+    
     var lastPoint = CGPoint.zero
     var swipe = false
     
@@ -38,6 +40,17 @@ class ViewController: UIViewController {
         tool.frame = CGRect(x: self.view.bounds.size.width, y: self.view.bounds.size.height, width: 38, height: 38)
         tool.image = #imageLiteral(resourceName: "artist-paint-brush-mrku1gj")
         self.view.addSubview(tool)
+        
+        colorSelectionBtnEdit()
+        
+    }
+    
+    func colorSelectionBtnEdit(){
+        
+        // White button
+        colorSelection.layer.borderWidth = 1
+        colorSelection.layer.borderColor = UIColor.black.cgColor
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
