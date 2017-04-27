@@ -80,6 +80,16 @@ class ViewController: UIViewController {
             drawnLine(from: lastPoint, to: lastPoint)
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        let settingsVC = segue.destination as! SettingsViewController
+        settingsVC.delegate = self
+        settingsVC.red = red
+        settingsVC.blue = blue
+        settingsVC.green = green
+    }
 
     @IBAction func resetBtn(_ sender: Any) {
         self.imagePhoto.image = nil
@@ -149,7 +159,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, SettingsVCDelagate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imagePicker = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.selectedImage = imagePicker
@@ -161,6 +171,12 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func settingsVCDidFinish(_ settingsVC: SettingsViewController) {
+        self.red = settingsVC.red
+        self.blue = settingsVC.blue
+        self.green = settingsVC.green
     }
 }
 

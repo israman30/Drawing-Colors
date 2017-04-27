@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SettingsVCDelagate: class {
+    func settingsVCDidFinish(_ settingsVC: SettingsViewController )
+    
+}
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -31,9 +36,22 @@ class SettingsViewController: UIViewController {
     var red: CGFloat = 0.0
     var blue: CGFloat = 0.0
     var green: CGFloat = 0.0
+    
+    var delegate: SettingsVCDelagate?
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        previewDraw(red: red, green: green, blue: blue)
+        
+        redSlider.value = Float(red)
+        redLabel.text = String(Int(redSlider.value * 255))
+        
+        greenSlider.value = Float(green)
+        greenLabel.text = String(Int(greenSlider.value * 255))
+        
+        blueSlider.value = Float(blue)
+        blueLabel.text = String(Int(blueSlider.value * 255))
 
         
     }
@@ -50,6 +68,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func backBtn(_ sender: Any) {
+        
+        if delegate != nil {
+            delegate?.settingsVCDidFinish(self)
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func redSliderChange(_ sender: Any) {
