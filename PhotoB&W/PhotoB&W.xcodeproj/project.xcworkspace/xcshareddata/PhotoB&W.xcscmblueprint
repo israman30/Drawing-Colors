@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3DAE3E90DBBB4F936D475F2A37AEBDD29200931D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "36C9ABCB8C9421CE533B15BE607B31972C587FB6" : 9223372036854775807,
+    "3DAE3E90DBBB4F936D475F2A37AEBDD29200931D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "177834CE-FB7E-42AE-A9D1-873888723258",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "36C9ABCB8C9421CE533B15BE607B31972C587FB6" : "..",
+    "3DAE3E90DBBB4F936D475F2A37AEBDD29200931D" : "Drawing-Colors\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PhotoB&W",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PhotoB&W\/PhotoB&W.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/israman30\/CameraPhotoProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36C9ABCB8C9421CE533B15BE607B31972C587FB6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/israman30\/Drawing-Colors.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3DAE3E90DBBB4F936D475F2A37AEBDD29200931D"
+    }
+  ]
+}
