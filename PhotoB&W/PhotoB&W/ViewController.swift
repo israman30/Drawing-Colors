@@ -108,7 +108,7 @@ class ViewController: UIViewController {
     
     @IBAction func saveBtn(_ sender: Any) {
         
-        let actionSheet = UIAlertController(title: "Pick an image", message: "", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Pick a Choice", message: "", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Pick an image", style: .default, handler: { (UIAlertAction) in
             
             let imagePicker = UIImagePickerController()
@@ -124,6 +124,10 @@ class ViewController: UIViewController {
                 UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             }
         }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        
+        present(actionSheet, animated: true, completion: nil)
         
         
     }
@@ -148,8 +152,15 @@ class ViewController: UIViewController {
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imagePicker = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                self.selectedImage = imagePicker
+            self.selectedImage = imagePicker
+            self.imagePhoto.image = selectedImage
+            
+            dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
