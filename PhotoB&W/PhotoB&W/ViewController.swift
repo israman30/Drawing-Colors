@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorSelection: UIButton!
     
+    @IBOutlet weak var toolBoxView: UIView!
+    
+    
     var lastPoint = CGPoint.zero
     var swipe = false
     
@@ -51,6 +54,13 @@ class ViewController: UIViewController {
         colorSelection.layer.borderWidth = 1
         colorSelection.layer.borderColor = UIColor.black.cgColor
 
+        toolBoxView.layer.masksToBounds = false
+        toolBoxView.layer.shadowOffset = CGSize(width: -1, height: 1)
+        toolBoxView.layer.shadowRadius = 2
+        toolBoxView.layer.shadowOpacity = 1
+        toolBoxView.layer.cornerRadius = 2
+
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
