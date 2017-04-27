@@ -214,11 +214,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-qG-zMT">
-                                <rect key="frame" x="24" y="28" width="47" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-qG-zMT">
+                                <rect key="frame" x="16" y="28" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="&lt;--" image="left">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -229,6 +228,11 @@
                                 <rect key="frame" x="117" y="76" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uhh-Ce-xlT">
+                                <rect key="frame" x="33" y="247" width="309" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="75" translatesAutoresizingMaskIntoConstraints="NO" id="2lm-1H-cUk">
                                 <rect key="frame" x="54" y="286" width="265" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -251,6 +255,14 @@
                                 <color key="minimumTrackTintColor" red="0.45493942499160767" green="0.10314757376909256" blue="0.086236037313938141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="redSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="Qtn-tZ-YCm"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-fV-A2o">
+                                <rect key="frame" x="54" y="504" width="265" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.18280503153800964" green="0.39561033248901367" blue="0.083229921758174896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="greenSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="cMN-mL-Nyi"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Emk-Dj-avM">
@@ -296,18 +308,11 @@
                                 <color key="textColor" red="0.0" green="0.26339688897132874" blue="0.95925217866897583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-fV-A2o">
-                                <rect key="frame" x="54" y="504" width="265" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.18280503153800964" green="0.39561033248901367" blue="0.083229921758174896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="greenSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="cMN-mL-Nyi"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="arrowBtn" destination="Ap5-qG-zMT" id="weW-92-Bo1"/>
                         <outlet property="blueLabel" destination="9Qk-aA-UBA" id="9zf-f8-Gpr"/>
                         <outlet property="blueSlider" destination="Emk-Dj-avM" id="sJe-fb-uRu"/>
                         <outlet property="brushSize" destination="6lV-Do-3aK" id="pz4-5q-wSM"/>
@@ -317,6 +322,7 @@
                         <outlet property="opacityLabel" destination="5BV-nT-soG" id="uEK-UB-pmf"/>
                         <outlet property="redLabel" destination="ikG-R9-Zdh" id="Dzt-Br-Fgo"/>
                         <outlet property="redSlider" destination="Tba-dn-rx3" id="WrQ-Px-zVV"/>
+                        <outlet property="twoSliders" destination="Uhh-Ce-xlT" id="noZ-KN-hrL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSx-ut-1U6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,6 +333,7 @@
     <resources>
         <image name="eraser" width="256" height="256"/>
         <image name="gear-button-icon-74362" width="512" height="512"/>
+        <image name="left" width="400" height="400"/>
         <image name="refresh25" width="512" height="512"/>
     </resources>
 </document>

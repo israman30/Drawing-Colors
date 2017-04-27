@@ -32,6 +32,11 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var blueSlider: UISlider!
     
+    @IBOutlet weak var twoSliders: UIView!
+    
+    @IBOutlet weak var arrowBtn: UIButton!
+    
+    
     var red: CGFloat = 0.0
     var blue: CGFloat = 0.0
     var green: CGFloat = 0.0
@@ -41,7 +46,7 @@ class SettingsViewController: UIViewController {
     var opacity: CGFloat = 1.0
     
     var delegate: SettingsVCDelagate?
-     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +60,21 @@ class SettingsViewController: UIViewController {
         
         blueSlider.value = Float(blue)
         blueLabel.text = String(Int(blueSlider.value * 255))
+        
+//        twoSliders.layer.borderWidth = 0.5
+        twoSliders.layer.cornerRadius = 8
+        twoSliders.layer.borderColor = UIColor.black.cgColor
+        twoSliders.layer.shadowColor = UIColor.black.cgColor
+        twoSliders.layer.masksToBounds = false
+        twoSliders.layer.shadowOffset = CGSize(width: -1, height: 1)
+        twoSliders.layer.shadowRadius = 4
+        twoSliders.layer.shadowOpacity = 1
+        
+        arrowBtn.layer.masksToBounds = false
+        arrowBtn.layer.shadowRadius = 4
+        arrowBtn.layer.shadowOffset = CGSize(width: -1, height: 1)
+        arrowBtn.layer.shadowRadius = 2
+        arrowBtn.layer.shadowOpacity = 1
     }
     
     // MARK: Changing brush size
