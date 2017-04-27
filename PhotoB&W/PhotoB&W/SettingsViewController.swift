@@ -27,6 +27,10 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     
     @IBOutlet weak var blueSlider: UISlider!
+    
+    var red: CGFloat = 0.0
+    var blue: CGFloat = 0.0
+    var green: CGFloat = 0.0
      
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +53,38 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func redSliderChange(_ sender: Any) {
+        
+        let slider = sender as! UISlider
+        red = CGFloat(slider.value)
+        previewDraw(red: red, green: green, blue: blue)
+        redLabel.text = "\(Int(slider.value * 255))"
     }
     
     @IBAction func greenSliderChange(_ sender: Any) {
+        
+        let slider = sender as! UISlider
+        green = CGFloat(slider.value)
+        previewDraw(red: red, green: green, blue: blue)
+        greenLabel.text = "\(Int(slider.value * 255))"
     }
     @IBAction func blueSliderChange(_ sender: Any) {
+        
+        let slider = sender as! UISlider
+        blue = CGFloat(slider.value)
+        previewDraw(red: red, green: green, blue: blue)
+        blueLabel.text = "\(Int(slider.value * 255))"
+    }
+    
+    func previewDraw(red: CGFloat, green: CGFloat, blue: CGFloat){
+        imageView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 
 }
+
+
+
+
+
+
+
+

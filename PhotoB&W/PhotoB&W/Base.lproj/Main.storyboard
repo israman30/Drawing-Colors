@@ -162,6 +162,9 @@
                                 <state key="normal" title="Settings" image="gear-button-icon-74362">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bkt-90-RS2" kind="presentation" modalTransitionStyle="crossDissolve" id="xdI-Yo-32r"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -245,7 +248,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-dn-rx3">
                                 <rect key="frame" x="54" y="446" width="265" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.90157657861709595" green="0.24166321754455566" blue="0.20993942022323608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="minimumTrackTintColor" red="0.45493942499160767" green="0.10314757376909256" blue="0.086236037313938141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="redSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="Qtn-tZ-YCm"/>
                                 </connections>
@@ -253,7 +256,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Emk-Dj-avM">
                                 <rect key="frame" x="54" y="558" width="265" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.26339688897132874" blue="0.95925217866897583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.11249787360429764" blue="0.47856396436691284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="blueSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="XTV-OG-Fzm"/>
                                 </connections>
@@ -296,7 +299,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RuR-fV-A2o">
                                 <rect key="frame" x="54" y="504" width="265" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="minimumTrackTintColor" red="0.47651278972625732" green="0.95214933156967163" blue="0.25395470857620239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="minimumTrackTintColor" red="0.18280503153800964" green="0.39561033248901367" blue="0.083229921758174896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="greenSliderChange:" destination="bkt-90-RS2" eventType="valueChanged" id="cMN-mL-Nyi"/>
                                 </connections>
