@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var green: CGFloat = 0.0
     var blue: CGFloat = 0.0
     
-    var brushSize: CGFloat = 5.0
+    var brushSize: CGFloat = 9.0
     
     var opacity: CGFloat = 1.0
     
@@ -164,6 +164,7 @@ class ViewController: UIViewController {
         }
         
         isDrawing = !isDrawing
+        
     }
 }
 
