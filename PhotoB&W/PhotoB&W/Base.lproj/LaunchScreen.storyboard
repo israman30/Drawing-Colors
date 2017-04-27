@@ -22,15 +22,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pintura" translatesAutoresizingMaskIntoConstraints="NO" id="S47-Vd-37a">
-                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <rect key="frame" x="57" y="203" width="260" height="260"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="kes-m7-u01"/>
-                                    <constraint firstAttribute="height" constant="200" id="wbW-4k-hLq"/>
+                                    <constraint firstAttribute="width" constant="260" id="kes-m7-u01"/>
+                                    <constraint firstAttribute="height" constant="260" id="wbW-4k-hLq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handprints" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-9m-kc0">
+                                <rect key="frame" x="217" y="182" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kwx-my-luQ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eJ1-9m-kc0" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="162" id="IET-WQ-ENK"/>
+                            <constraint firstItem="eJ1-9m-kc0" firstAttribute="leading" secondItem="S47-Vd-37a" secondAttribute="trailing" constant="-100" id="PmT-b9-7tx"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eJ1-9m-kc0" secondAttribute="bottom" constant="385" id="mwl-20-PDd"/>
                             <constraint firstItem="S47-Vd-37a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="r8v-tb-LOu"/>
                             <constraint firstItem="S47-Vd-37a" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="w2u-Yv-ATO"/>
                         </constraints>
@@ -42,6 +51,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="handprints" width="239" height="220"/>
         <image name="pintura" width="220" height="220"/>
     </resources>
 </document>
