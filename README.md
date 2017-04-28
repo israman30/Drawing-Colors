@@ -5,20 +5,20 @@ You can have a drawing time and change colors and user a filter to choose types 
 Using filters the user also is able to choose and manage colors.
 ## The main dashboard
 > Bar menu
-> > Reset Button
+> * Reset Button
  
-> > Save & Photo Picker
+> * Save & Photo Picker
  
-> > Eraser
+> * Eraser
 > > 
-> > Setting 
+> * Setting 
 > > 
 > > * Manage the color, brush and opacity
 
 > Color Selection
 
 
-![Alt Image Text](images/main.png)
+![Alt Image Text](images/main.PNG)
 
 ## Setting Page
 > Brush Size 
@@ -32,6 +32,6 @@ Using filters the user also is able to choose and manage colors.
 * Green
 * Blue
 
-![Alt Image Text](images/filter.png)
+![Alt Image Text](images/filter.PNG)
  
 
