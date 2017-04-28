@@ -22,6 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I00-rp-CPb">
+                                <rect key="frame" x="0.0" y="79" width="375" height="533"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fZb-jo-Gep"/>
+                                </connections>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-d7-seM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
@@ -177,12 +183,16 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jf4-IX-P3i" secondAttribute="bottom" constant="20" id="5Id-rp-vfN"/>
                             <constraint firstItem="J4M-bY-vgY" firstAttribute="leading" secondItem="Sd5-vJ-yt0" secondAttribute="trailing" constant="8" id="7sk-gw-nvF"/>
                             <constraint firstItem="Sd5-vJ-yt0" firstAttribute="leading" secondItem="gh6-vF-7qd" secondAttribute="trailing" constant="8" id="ABx-Al-JtN"/>
+                            <constraint firstItem="I00-rp-CPb" firstAttribute="top" secondItem="wkH-1e-jQv" secondAttribute="bottom" id="Af9-P1-5Zi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="11W-G5-hV4" secondAttribute="bottom" constant="20" id="COf-yq-fes"/>
+                            <constraint firstItem="I00-rp-CPb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DLo-nz-dWb"/>
                             <constraint firstAttribute="trailing" secondItem="KaS-d7-seM" secondAttribute="trailing" id="DLs-Tz-dP7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bKJ-i3-Mjh" secondAttribute="bottom" constant="20" id="MS0-lQ-Mal"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sd5-vJ-yt0" secondAttribute="bottom" constant="20" id="Oaz-lg-2y7"/>
                             <constraint firstItem="wkH-1e-jQv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ora-55-Qgr"/>
+                            <constraint firstAttribute="trailing" secondItem="I00-rp-CPb" secondAttribute="trailing" id="PSI-dQ-9gP"/>
                             <constraint firstItem="KaS-d7-seM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="RPj-Om-1Hb"/>
+                            <constraint firstItem="bKJ-i3-Mjh" firstAttribute="top" secondItem="I00-rp-CPb" secondAttribute="bottom" id="RfF-YH-sAq"/>
                             <constraint firstItem="11W-G5-hV4" firstAttribute="leading" secondItem="Jax-K3-bW9" secondAttribute="trailing" constant="8" id="RfY-yI-yI5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jax-K3-bW9" secondAttribute="bottom" constant="20" id="RkK-nh-hRD"/>
                             <constraint firstItem="gh6-vF-7qd" firstAttribute="leading" secondItem="11W-G5-hV4" secondAttribute="trailing" constant="8" id="SHe-Fn-iLn"/>
@@ -200,6 +210,7 @@
                     <connections>
                         <outlet property="colorSelection" destination="bKJ-i3-Mjh" id="MkT-WY-OKZ"/>
                         <outlet property="imagePhoto" destination="KaS-d7-seM" id="BgB-qj-h3U"/>
+                        <outlet property="scrollView" destination="I00-rp-CPb" id="rl7-5q-sU4"/>
                         <outlet property="toolBoxView" destination="myN-YE-bjk" id="BOK-KL-hGd"/>
                         <outlet property="toolEraserIcon" destination="szh-Nf-D9r" id="kJu-IG-gEi"/>
                     </connections>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var imagePhoto: UIImageView!
     
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toolBoxView: UIView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var lastPoint = CGPoint.zero
     var swipe = false
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.scrollView.minimumZoomScale = 1.0
+        self.scrollView.maximumZoomScale = 6.0
         
         // Creating an image brush when user tap the view
         tool = UIImageView()
@@ -65,6 +69,10 @@ class ViewController: UIViewController {
         if let touch = touches.first {
             lastPoint = touch.location(in: self.view)
         }
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.imagePhoto
     }
     
     //MARK: Drawing a line function
@@ -147,7 +155,7 @@ class ViewController: UIViewController {
     // MARK: Saving a drawing with alert sheet + photo picker
     @IBAction func saveBtn(_ sender: Any) {
         
-        let actionSheet = UIAlertController(title: "Pick a Choice", message: "", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "My Drawing", message: "Pick a Choice", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Pick an image", style: .default, handler: { (UIAlertAction) in
             
             let imagePicker = UIImagePickerController()
@@ -158,7 +166,7 @@ class ViewController: UIViewController {
             self.present(imagePicker, animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Save your art", style: .default, handler: { (UIAlertAction) in
+        actionSheet.addAction(UIAlertAction(title: "Save your Art", style: .default, handler: { (UIAlertAction) in
             
             if let image = self.imagePhoto.image {
                 UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
