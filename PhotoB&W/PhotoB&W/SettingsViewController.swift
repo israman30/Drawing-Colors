@@ -92,12 +92,8 @@ class SettingsViewController: UIViewController {
         opacity = CGFloat(slider.value)
         previewDraw(red: red, green: green, blue: blue)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    // MARK: Back button
     @IBAction func backBtn(_ sender: Any) {
         
         if delegate != nil {
@@ -106,6 +102,7 @@ class SettingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Action.- Red Slider
     @IBAction func redSliderChange(_ sender: Any) {
         
         let slider = sender as! UISlider
@@ -114,6 +111,7 @@ class SettingsViewController: UIViewController {
         redLabel.text = "\(Int(slider.value * 255))"
     }
     
+    // MARK: Action.- Green Slider
     @IBAction func greenSliderChange(_ sender: Any) {
         
         let slider = sender as! UISlider
@@ -122,6 +120,7 @@ class SettingsViewController: UIViewController {
         greenLabel.text = "\(Int(slider.value * 255))"
     }
     
+    // MARK: Action.- Blue Slider
     @IBAction func blueSliderChange(_ sender: Any) {
         
         let slider = sender as! UISlider

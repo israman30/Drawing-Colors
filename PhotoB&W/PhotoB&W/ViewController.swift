@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: Color selection function
     func colorSelectionBtnEdit(){
         // White button
         colorSelection.layer.borderWidth = 1
@@ -58,13 +59,6 @@ class ViewController: UIViewController {
         toolBoxView.layer.shadowRadius = 2
         toolBoxView.layer.shadowOpacity = 1
         toolBoxView.layer.cornerRadius = 4
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        swipe = false
-        if let touch = touches.first {
-            lastPoint = touch.location(in: self.view)
-        }
     }
     
     //MARK: Drawing a line function
@@ -88,6 +82,14 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
     }
     
+    // MARK: Drawing functions by touch
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swipe = false
+        if let touch = touches.first {
+            lastPoint = touch.location(in: self.view)
+        }
+    }
+    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         swipe = true
@@ -105,6 +107,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: Prepare for segue function
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -117,7 +120,7 @@ class ViewController: UIViewController {
         settingsVC.opacity = opacity
     }
 
-    // MARK: Reset view
+    // MARK: Reset/Clearing view after drawing
     @IBAction func resetBtn(_ sender: Any) {
         self.imagePhoto.image = nil
     }
@@ -170,7 +173,7 @@ class ViewController: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
-    // MARK: Erase draw line
+    // MARK: Erase draw line switching the icon of brush to eraser.
     @IBAction func eraseBtn(_ sender: Any) {
         
         if isDrawing {
@@ -184,13 +187,14 @@ class ViewController: UIViewController {
         }
         
         isDrawing = !isDrawing
-        
     }
 }
 
 
 // MARK: Extension.- Picker controller
 extension ViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate, SettingsVCDelagate {
+    
+    // MARK: Picker controller delegate functions
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imagePicker = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.selectedImage = imagePicker
@@ -204,6 +208,7 @@ extension ViewController: UINavigationControllerDelegate, UIImagePickerControlle
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: Setting view controller
     func settingsVCDidFinish(_ settingsVC: SettingsViewController) {
         self.red = settingsVC.red
         self.blue = settingsVC.blue
