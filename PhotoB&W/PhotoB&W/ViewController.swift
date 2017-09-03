@@ -18,6 +18,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toolBoxView: UIView!
     
+    @IBOutlet weak var blackBtn: UIButton!
+    
+    @IBOutlet weak var babyBlueBtn: UIButton!
+    
+    @IBOutlet weak var yellowBtn: UIButton!
+    
+    @IBOutlet weak var pinkBtn: UIButton!
+    
+    @IBOutlet weak var blueBtn: UIButton!
+    
+    @IBOutlet weak var greenBtn: UIButton!
+    
+    @IBOutlet weak var redBtn: UIButton!
+    
     
     var lastPoint = CGPoint.zero
     var swipe = false
@@ -50,9 +64,40 @@ class ViewController: UIViewController {
     
     // MARK: Color selection function
     func colorSelectionBtnEdit(){
+        
+        blackBtn.layer.cornerRadius = 6
+        blackBtn.layer.borderWidth = 1.5
+        blackBtn.layer.borderColor = UIColor.black.cgColor
+        
+        babyBlueBtn.layer.cornerRadius = 6
+        babyBlueBtn.layer.borderWidth = 1.5
+        babyBlueBtn.layer.borderColor = UIColor.black.cgColor
+        
+        yellowBtn.layer.cornerRadius = 6
+        yellowBtn.layer.borderWidth = 1.5
+        yellowBtn.layer.borderColor = UIColor.black.cgColor
+        
+        pinkBtn.layer.cornerRadius = 6
+        pinkBtn.layer.borderWidth = 1.5
+        pinkBtn.layer.borderColor = UIColor.black.cgColor
+        
+        blueBtn.layer.cornerRadius = 6
+        blueBtn.layer.borderWidth = 1.5
+        blueBtn.layer.borderColor = UIColor.black.cgColor
+
+        greenBtn.layer.cornerRadius = 6
+        greenBtn.layer.borderWidth = 1.5
+        greenBtn.layer.borderColor = UIColor.black.cgColor
+        
+        redBtn.layer.cornerRadius = 6
+        redBtn.layer.borderWidth = 1.5
+        redBtn.layer.borderColor = UIColor.black.cgColor
+        
+        
         // White button
-        colorSelection.layer.borderWidth = 1
+        colorSelection.layer.borderWidth = 1.5
         colorSelection.layer.borderColor = UIColor.black.cgColor
+        colorSelection.layer.cornerRadius = 7
 
         toolBoxView.layer.masksToBounds = false
         toolBoxView.layer.shadowOffset = CGSize(width: -1, height: 1)

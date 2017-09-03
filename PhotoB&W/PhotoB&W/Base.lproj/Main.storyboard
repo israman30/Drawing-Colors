@@ -198,10 +198,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="babyBlueBtn" destination="dTu-zT-TP9" id="Iz4-eL-tof"/>
+                        <outlet property="blackBtn" destination="jf4-IX-P3i" id="U9p-et-xnN"/>
+                        <outlet property="blueBtn" destination="gh6-vF-7qd" id="LIV-LE-UWf"/>
                         <outlet property="colorSelection" destination="bKJ-i3-Mjh" id="MkT-WY-OKZ"/>
+                        <outlet property="greenBtn" destination="11W-G5-hV4" id="fAr-2M-4or"/>
                         <outlet property="imagePhoto" destination="KaS-d7-seM" id="BgB-qj-h3U"/>
+                        <outlet property="pinkBtn" destination="Sd5-vJ-yt0" id="r3B-iq-QLh"/>
+                        <outlet property="redBtn" destination="Jax-K3-bW9" id="0i0-jB-cwL"/>
                         <outlet property="toolBoxView" destination="myN-YE-bjk" id="BOK-KL-hGd"/>
                         <outlet property="toolEraserIcon" destination="szh-Nf-D9r" id="kJu-IG-gEi"/>
+                        <outlet property="yellowBtn" destination="J4M-bY-vgY" id="lgM-yU-rlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
