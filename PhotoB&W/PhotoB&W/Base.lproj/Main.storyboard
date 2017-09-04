@@ -239,9 +239,12 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-QJ-3dd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-qG-zMT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap5-qG-zMT">
                                 <rect key="frame" x="16" y="28" width="51" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cqv-Af-kat"/>
+                                    <constraint firstAttribute="width" constant="51" id="rg7-ik-5tn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GloriaHallelujah" family="Gloria Hallelujah" pointSize="22"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -430,6 +433,7 @@
                             <constraint firstItem="uR4-Zh-y6G" firstAttribute="top" secondItem="5BV-nT-soG" secondAttribute="bottom" constant="5" id="MkL-T8-hVe"/>
                             <constraint firstItem="Emk-Dj-avM" firstAttribute="top" secondItem="Uhh-Ce-xlT" secondAttribute="bottom" constant="-54" id="PQi-Oe-Zha"/>
                             <constraint firstItem="RuR-fV-A2o" firstAttribute="centerX" secondItem="drp-nb-0Cy" secondAttribute="centerX" id="QJL-l1-2Qb"/>
+                            <constraint firstItem="Ap5-qG-zMT" firstAttribute="top" secondItem="Wen-t2-U4q" secondAttribute="bottom" constant="8" id="TOR-9C-jGd"/>
                             <constraint firstItem="Uhh-Ce-xlT" firstAttribute="top" secondItem="zwb-WV-WlA" secondAttribute="bottom" constant="31" id="VDp-Mu-PuM"/>
                             <constraint firstItem="Tba-dn-rx3" firstAttribute="centerX" secondItem="xuw-9T-DZb" secondAttribute="centerX" id="b00-0G-NUX"/>
                             <constraint firstItem="RuR-fV-A2o" firstAttribute="top" secondItem="Tba-dn-rx3" secondAttribute="bottom" constant="28" id="cAQ-Em-Njs"/>
@@ -441,6 +445,7 @@
                             <constraint firstItem="Uhh-Ce-xlT" firstAttribute="centerX" secondItem="xuw-9T-DZb" secondAttribute="centerX" id="nsz-Qh-gvt"/>
                             <constraint firstItem="feF-w5-1qk" firstAttribute="top" secondItem="Uhh-Ce-xlT" secondAttribute="bottom" constant="55" id="oXi-mt-Gki"/>
                             <constraint firstItem="9I4-5V-Y3J" firstAttribute="top" secondItem="NFf-sN-KxE" secondAttribute="bottom" constant="31" id="pGW-9a-pQP"/>
+                            <constraint firstItem="Ap5-qG-zMT" firstAttribute="leading" secondItem="xuw-9T-DZb" secondAttribute="leadingMargin" id="paI-Ot-zLi"/>
                             <constraint firstItem="uR4-Zh-y6G" firstAttribute="centerX" secondItem="xuw-9T-DZb" secondAttribute="centerX" id="t4D-SN-SMJ"/>
                             <constraint firstItem="drp-nb-0Cy" firstAttribute="top" secondItem="Tba-dn-rx3" secondAttribute="bottom" constant="20" id="tpd-Tq-lc8"/>
                             <constraint firstItem="feF-w5-1qk" firstAttribute="top" secondItem="XWq-QJ-3dd" secondAttribute="bottom" id="viw-aq-oYO"/>
