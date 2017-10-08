@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Regular</string>
+        </array>
+        <array key="Chalkduster.ttf">
+            <string>Chalkduster</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -21,37 +32,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pintura" translatesAutoresizingMaskIntoConstraints="NO" id="S47-Vd-37a">
-                                <rect key="frame" x="57" y="203" width="260" height="260"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hus-T1-s7b">
+                                <rect key="frame" x="117.5" y="302" width="140" height="62.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-G6-hUo">
+                                        <rect key="frame" x="0.0" y="20.5" width="13.5" height="42"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="33"/>
+                                        <color key="textColor" red="0.85882352939999995" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dibujo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Iv-AA-X3h">
+                                        <rect key="frame" x="14.5" y="0.0" width="125.5" height="62.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="44"/>
+                                        <color key="textColor" red="0.0" green="0.17282156347222224" blue="0.72056749131944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WG-QT-aXW">
+                                <rect key="frame" x="152.5" y="593" width="71" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="kes-m7-u01"/>
-                                    <constraint firstAttribute="height" constant="260" id="wbW-4k-hLq"/>
+                                    <constraint firstAttribute="height" constant="21" id="AUO-ly-rjI"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handprints" translatesAutoresizingMaskIntoConstraints="NO" id="eJ1-9m-kc0">
-                                <rect key="frame" x="217" y="182" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Kwx-my-luQ"/>
-                                </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eJ1-9m-kc0" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="162" id="IET-WQ-ENK"/>
-                            <constraint firstItem="eJ1-9m-kc0" firstAttribute="leading" secondItem="S47-Vd-37a" secondAttribute="trailing" constant="-100" id="PmT-b9-7tx"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="eJ1-9m-kc0" secondAttribute="bottom" constant="385" id="mwl-20-PDd"/>
-                            <constraint firstItem="S47-Vd-37a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="r8v-tb-LOu"/>
-                            <constraint firstItem="S47-Vd-37a" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="w2u-Yv-ATO"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5WG-QT-aXW" secondAttribute="bottom" constant="53" id="Ohp-PC-cya"/>
+                            <constraint firstItem="Hus-T1-s7b" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VIS-sI-hMz"/>
+                            <constraint firstItem="5WG-QT-aXW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cA3-BE-MwR"/>
+                            <constraint firstItem="Hus-T1-s7b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tIL-pT-igN"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="handprints" width="239" height="220"/>
-        <image name="pintura" width="220" height="220"/>
-    </resources>
 </document>
