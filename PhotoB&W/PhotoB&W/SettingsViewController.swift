@@ -50,45 +50,37 @@ class SettingsViewController: UIViewController {
         blueSlider.value = Float(blue)
         blueLabel.text = String(Int(blueSlider.value * 255))
         
-//        twoSliders.layer.borderWidth = 0.5
-        twoSliders.layer.cornerRadius = 8
-        twoSliders.layer.borderColor = UIColor.black.cgColor
-        twoSliders.layer.shadowColor = UIColor.black.cgColor
-        twoSliders.layer.masksToBounds = false
-        twoSliders.layer.shadowOffset = CGSize(width: -1, height: 1)
-        twoSliders.layer.shadowRadius = 4
-        twoSliders.layer.shadowOpacity = 1
-        
-        arrowBtn.layer.masksToBounds = false
-        arrowBtn.layer.shadowRadius = 4
-        arrowBtn.layer.shadowOffset = CGSize(width: -1, height: 1)
-        arrowBtn.layer.shadowRadius = 2
-        arrowBtn.layer.shadowOpacity = 1
+        settingToolsView()
     }
     
     // MARK: Changing brush size
     @IBAction func brushSizeChange(_ sender: Any) {
-        
-        let slider = sender as! UISlider
-        brushSize1 = CGFloat(slider.value)
-        previewDraw(red: red, green: green, blue: blue)
+        brushSize(sender)
     }
     
     // MARK: Changing brush opacity
     @IBAction func opacityChange(_ sender: Any) {
+        opacitySet(sender)
         
-        let slider = sender as! UISlider
-        opacity = CGFloat(slider.value)
-        previewDraw(red: red, green: green, blue: blue)
     }
     
     // MARK: Back button
     @IBAction func backBtn(_ sender: Any) {
+        backButton()
         
-        if delegate != nil {
-            delegate?.settingsVCDidFinish(self)
-        }
-        dismiss(animated: true, completion: nil)
+//        if delegate != nil {
+//            delegate?.settingsVCDidFinish(self)
+//        }
+//        dismiss(animated: true, completion: nil)
+    }
+    
+    func backButton(){
+        
+        delegate != nil ? delegate?.settingsVCDidFinish(self) : dismiss(animated: true, completion: nil)
+//        if delegate != nil {
+//            delegate?.settingsVCDidFinish(self)
+//        }
+//        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Action.- Red Slider
@@ -120,7 +112,6 @@ class SettingsViewController: UIViewController {
     
     // MARK: Preview drawing function
     func previewDraw(red: CGFloat, green: CGFloat, blue: CGFloat){
-//        imageView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         UIGraphicsBeginImageContext(imageView.frame.size)
         
         let context = UIGraphicsGetCurrentContext()
