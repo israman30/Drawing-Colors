@@ -22,6 +22,7 @@
 		8D7E647D2140C8B400D8E76C /* PickColorSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E647C2140C8B400D8E76C /* PickColorSetting.swift */; };
 		8D7E64812140C9FC00D8E76C /* SetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E64802140C9FC00D8E76C /* SetSettingView.swift */; };
 		8D7E64832140CABB00D8E76C /* ToolsFunctions+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E64822140CABB00D8E76C /* ToolsFunctions+Ext.swift */; };
+		8D7E6485214190ED00D8E76C /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E6484214190ED00D8E76C /* SettingsProtocol.swift */; };
 		8D8C8A0F1F5CE34B0098D9F5 /* GloriaHallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C8A0E1F5CE34B0098D9F5 /* GloriaHallelujah.ttf */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		8D7E647C2140C8B400D8E76C /* PickColorSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickColorSetting.swift; sourceTree = "<group>"; };
 		8D7E64802140C9FC00D8E76C /* SetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSettingView.swift; sourceTree = "<group>"; };
 		8D7E64822140CABB00D8E76C /* ToolsFunctions+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToolsFunctions+Ext.swift"; sourceTree = "<group>"; };
+		8D7E6484214190ED00D8E76C /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
 		8D8C8A0E1F5CE34B0098D9F5 /* GloriaHallelujah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GloriaHallelujah.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1DE8931EB22B5D00BB9DF0 /* SettingsViewController.swift */,
+				8D7E6484214190ED00D8E76C /* SettingsProtocol.swift */,
 				8D7E64822140CABB00D8E76C /* ToolsFunctions+Ext.swift */,
 			);
 			name = SettingViewCotroller;
@@ -217,6 +220,7 @@
 				8D32DDB12140C43F0039D781 /* SetMainView.swift in Sources */,
 				8D1DE8841EB100C600BB9DF0 /* ViewController.swift in Sources */,
 				8D1DE8821EB100C600BB9DF0 /* AppDelegate.swift in Sources */,
+				8D7E6485214190ED00D8E76C /* SettingsProtocol.swift in Sources */,
 				8D7E64832140CABB00D8E76C /* ToolsFunctions+Ext.swift in Sources */,
 				8D1DE8941EB22B5D00BB9DF0 /* SettingsViewController.swift in Sources */,
 				8D7E64772140C71700D8E76C /* Draw+Ext.swift in Sources */,

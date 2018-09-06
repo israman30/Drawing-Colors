@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SettingsVCDelagate: class {
-    func settingsVCDidFinish(_ settingsVC: SettingsViewController )
-}
-
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -31,7 +27,6 @@ class SettingsViewController: UIViewController {
     var green: CGFloat = 0.0
     
     var brushSize1: CGFloat = 5.0
-    
     var opacity: CGFloat = 1.0
     
     var delegate: SettingsVCDelagate?
@@ -40,16 +35,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         previewDraw(red: red, green: green, blue: blue)
-        
-        redSlider.value = Float(red)
-        redLabel.text = String(Int(redSlider.value * 255))
-        
-        greenSlider.value = Float(green)
-        greenLabel.text = String(Int(greenSlider.value * 255))
-        
-        blueSlider.value = Float(blue)
-        blueLabel.text = String(Int(blueSlider.value * 255))
-        
+        setColorsliders()
         settingToolsView()
     }
     
@@ -93,22 +79,6 @@ class SettingsViewController: UIViewController {
         blueLabel.text = "\(Int(slider.value * 255))"
     }
     
-    // MARK: Preview drawing function
-    func previewDraw(red: CGFloat, green: CGFloat, blue: CGFloat){
-        UIGraphicsBeginImageContext(imageView.frame.size)
-        
-        let context = UIGraphicsGetCurrentContext()
-        context?.setStrokeColor(UIColor(red: red, green: green, blue: blue, alpha: opacity).cgColor)
-        context?.setLineWidth(brushSize1)
-        context?.setLineCap(CGLineCap.round)
-        context?.move(to: CGPoint(x: 70, y: 70))
-        context?.addLine(to: CGPoint(x: 70, y: 70))
-        context?.strokePath()
-        
-        imageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-    }
-
 }
 
 
