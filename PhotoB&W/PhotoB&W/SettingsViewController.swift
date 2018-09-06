@@ -67,25 +67,10 @@ class SettingsViewController: UIViewController {
     // MARK: Back button
     @IBAction func backBtn(_ sender: Any) {
         backButton()
-        
-//        if delegate != nil {
-//            delegate?.settingsVCDidFinish(self)
-//        }
-//        dismiss(animated: true, completion: nil)
-    }
-    
-    func backButton(){
-        
-        delegate != nil ? delegate?.settingsVCDidFinish(self) : dismiss(animated: true, completion: nil)
-//        if delegate != nil {
-//            delegate?.settingsVCDidFinish(self)
-//        }
-//        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Action.- Red Slider
     @IBAction func redSliderChange(_ sender: Any) {
-        
         let slider = sender as! UISlider
         red = CGFloat(slider.value)
         previewDraw(red: red, green: green, blue: blue)
@@ -94,7 +79,6 @@ class SettingsViewController: UIViewController {
     
     // MARK: Action.- Green Slider
     @IBAction func greenSliderChange(_ sender: Any) {
-        
         let slider = sender as! UISlider
         green = CGFloat(slider.value)
         previewDraw(red: red, green: green, blue: blue)
@@ -103,7 +87,6 @@ class SettingsViewController: UIViewController {
     
     // MARK: Action.- Blue Slider
     @IBAction func blueSliderChange(_ sender: Any) {
-        
         let slider = sender as! UISlider
         blue = CGFloat(slider.value)
         previewDraw(red: red, green: green, blue: blue)

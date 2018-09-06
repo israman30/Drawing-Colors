@@ -22,4 +22,12 @@ extension SettingsViewController {
         previewDraw(red: red, green: green, blue: blue)
     }
     
+    func backButton(){
+        if delegate != nil {
+            delegate?.settingsVCDidFinish(self)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
