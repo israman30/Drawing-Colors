@@ -47,7 +47,6 @@ class SettingsViewController: UIViewController {
     // MARK: Changing brush opacity
     @IBAction func opacityChange(_ sender: Any) {
         opacitySet(sender)
-        
     }
     
     // MARK: Back button

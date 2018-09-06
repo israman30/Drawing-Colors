@@ -30,5 +30,4 @@ extension ViewController {
             (red, green, blue) = (0, 0, 0)
         }
     }
-    
 }
