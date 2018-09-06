@@ -14,6 +14,12 @@
 		8D1DE88C1EB100C600BB9DF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1DE88A1EB100C600BB9DF0 /* LaunchScreen.storyboard */; };
 		8D1DE8941EB22B5D00BB9DF0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1DE8931EB22B5D00BB9DF0 /* SettingsViewController.swift */; };
 		8D32DDB12140C43F0039D781 /* SetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32DDB02140C43F0039D781 /* SetMainView.swift */; };
+		8D32DDB32140C5B60039D781 /* PickerController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D32DDB22140C5B60039D781 /* PickerController+Ext.swift */; };
+		8D7E64752140C6D200D8E76C /* Touches+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E64742140C6D200D8E76C /* Touches+Ext.swift */; };
+		8D7E64772140C71700D8E76C /* Draw+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E64762140C71700D8E76C /* Draw+Ext.swift */; };
+		8D7E64792140C7DC00D8E76C /* SaveButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E64782140C7DC00D8E76C /* SaveButton+Ext.swift */; };
+		8D7E647B2140C85300D8E76C /* EraseButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E647A2140C85300D8E76C /* EraseButton+Ext.swift */; };
+		8D7E647D2140C8B400D8E76C /* PickColorSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E647C2140C8B400D8E76C /* PickColorSetting.swift */; };
 		8D8C8A0F1F5CE34B0098D9F5 /* GloriaHallelujah.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D8C8A0E1F5CE34B0098D9F5 /* GloriaHallelujah.ttf */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		8D1DE88D1EB100C600BB9DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1DE8931EB22B5D00BB9DF0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8D32DDB02140C43F0039D781 /* SetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMainView.swift; sourceTree = "<group>"; };
+		8D32DDB22140C5B60039D781 /* PickerController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PickerController+Ext.swift"; sourceTree = "<group>"; };
+		8D7E64742140C6D200D8E76C /* Touches+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Touches+Ext.swift"; sourceTree = "<group>"; };
+		8D7E64762140C71700D8E76C /* Draw+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Draw+Ext.swift"; sourceTree = "<group>"; };
+		8D7E64782140C7DC00D8E76C /* SaveButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SaveButton+Ext.swift"; sourceTree = "<group>"; };
+		8D7E647A2140C85300D8E76C /* EraseButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EraseButton+Ext.swift"; sourceTree = "<group>"; };
+		8D7E647C2140C8B400D8E76C /* PickColorSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickColorSetting.swift; sourceTree = "<group>"; };
 		8D8C8A0E1F5CE34B0098D9F5 /* GloriaHallelujah.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GloriaHallelujah.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +72,8 @@
 		8D1DE8801EB100C600BB9DF0 /* PhotoB&W */ = {
 			isa = PBXGroup;
 			children = (
-				8D32DDAF2140C4060039D781 /* View */,
 				8D8C8A101F5CE62A0098D9F5 /* Controller */,
+				8D32DDAF2140C4060039D781 /* View */,
 				8D1DE88D1EB100C600BB9DF0 /* Info.plist */,
 			);
 			path = "PhotoB&W";
@@ -79,12 +91,34 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		8D7E647E2140C98300D8E76C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DE8831EB100C600BB9DF0 /* ViewController.swift */,
+				8D32DDB22140C5B60039D781 /* PickerController+Ext.swift */,
+				8D7E64742140C6D200D8E76C /* Touches+Ext.swift */,
+				8D7E64782140C7DC00D8E76C /* SaveButton+Ext.swift */,
+				8D7E647A2140C85300D8E76C /* EraseButton+Ext.swift */,
+				8D7E647C2140C8B400D8E76C /* PickColorSetting.swift */,
+				8D7E64762140C71700D8E76C /* Draw+Ext.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		8D7E647F2140C99600D8E76C /* SettingViewCotroller */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DE8931EB22B5D00BB9DF0 /* SettingsViewController.swift */,
+			);
+			name = SettingViewCotroller;
+			sourceTree = "<group>";
+		};
 		8D8C8A101F5CE62A0098D9F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				8D1DE8811EB100C600BB9DF0 /* AppDelegate.swift */,
-				8D1DE8831EB100C600BB9DF0 /* ViewController.swift */,
-				8D1DE8931EB22B5D00BB9DF0 /* SettingsViewController.swift */,
+				8D7E647F2140C99600D8E76C /* SettingViewCotroller */,
+				8D7E647E2140C98300D8E76C /* Main */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -172,10 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D32DDB32140C5B60039D781 /* PickerController+Ext.swift in Sources */,
+				8D7E647D2140C8B400D8E76C /* PickColorSetting.swift in Sources */,
 				8D32DDB12140C43F0039D781 /* SetMainView.swift in Sources */,
 				8D1DE8841EB100C600BB9DF0 /* ViewController.swift in Sources */,
 				8D1DE8821EB100C600BB9DF0 /* AppDelegate.swift in Sources */,
 				8D1DE8941EB22B5D00BB9DF0 /* SettingsViewController.swift in Sources */,
+				8D7E64772140C71700D8E76C /* Draw+Ext.swift in Sources */,
+				8D7E647B2140C85300D8E76C /* EraseButton+Ext.swift in Sources */,
+				8D7E64792140C7DC00D8E76C /* SaveButton+Ext.swift in Sources */,
+				8D7E64752140C6D200D8E76C /* Touches+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,27 +15,16 @@ protocol SettingsVCDelagate: class {
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var brushSize: UILabel!
-    
     @IBOutlet weak var opacityLabel: UILabel!
-    
     @IBOutlet weak var redLabel: UILabel!
-    
     @IBOutlet weak var greenLabel: UILabel!
-    
     @IBOutlet weak var blueLabel: UILabel!
-    
     @IBOutlet weak var redSlider: UISlider!
-    
     @IBOutlet weak var greenSlider: UISlider!
-    
     @IBOutlet weak var blueSlider: UISlider!
-    
     @IBOutlet weak var twoSliders: UIView!
-    
     @IBOutlet weak var arrowBtn: UIButton!
-    
     
     var red: CGFloat = 0.0
     var blue: CGFloat = 0.0

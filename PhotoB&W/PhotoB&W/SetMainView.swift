@@ -9,6 +9,18 @@
 import UIKit
 
 extension ViewController {
+    
+    func settingDrawBoardView(){
+        // Creating an image brush when user tap the view
+        tool = UIImageView()
+        tool.frame = CGRect(x: view.bounds.size.width, y: view.bounds.size.height, width: 38, height: 38)
+        tool.image = #imageLiteral(resourceName: "artist-paint-brush-mrku1gj")
+        view.addSubview(tool)
+        
+        colorSelectionBtnEdit()
+        
+    }
+    
     // MARK: Color selection function
     func colorSelectionBtnEdit(){
         
